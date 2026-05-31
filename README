@@ -1,0 +1,73 @@
+# Autor
+
+Marlon Mendes Mazarin
+
+
+# Transportadora GDM
+
+Projeto desenvolvido durante as aulas, onde a atualização para a atividade 4 foi melhorado a estrutura, e feito um quadro kanban de tarefas.
+
+
+# Objetivo
+
+Desenvolver um protótipo de sistema de transportadora com:
+
+- área do cliente;
+- dashboard de entregas;
+- pesquisa de produtos;
+- compra de produtos;
+- envio de pedidos para a transportadora;
+- atualização de status das entregas.
+- organização de tarefas utilizando Kanban.
+
+
+# Tecnologias Utilizadas
+
+- HTML
+- CSS
+- JavaScript
+- Bootstrap 
+- LocalStorage
+
+
+# Funcionalidades
+
+Área do Cliente
+
+- Visualização de produtos
+- Pesquisa de produtos
+- Dashboard de entregas
+- Compra de produtos
+- Cadastro de cliente
+
+
+Área da Transportadora
+
+- Visualização de pedidos
+- Atualização de status: Pendente, Em rota e Entregue
+
+
+# Estrutura do Projeto
+
+transportadora-gdm/
+│
+├── cliente/
+│   ├── index.html
+│   ├── compra.html
+│   ├── style.css
+│   ├── script.js
+│   └── imagens/
+│
+├── transportadora/
+│   ├── painel.html
+│   ├── style.css
+│   └── painel.js
+│
+├── docs/
+│   └── plano-execucao-8h.md
+│
+├── evidencias/
+│   ├── aula1-kanban.png
+│   └── aula2-kanban.png
+|
+└── README.md

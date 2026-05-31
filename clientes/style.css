@@ -1,0 +1,100 @@
+/*BODY */
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*NAVBAR */
+
+.navbar {
+  padding: 15px;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+
+/*DASHBOARD */
+
+.dashboard-card {
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.03);
+}
+
+.dashboard-card h2 {
+  color: #3483fa;
+  font-weight: bold;
+}
+
+
+/*PRODUTOS */
+
+.product-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+/*IMAGENS */
+
+.card img {
+
+  height: 250px;
+
+  object-fit: contain;
+
+  padding: 15px;
+
+  background-color: rgb(255, 255, 255);
+}
+
+
+/*BOTÕES */
+
+.btn-primary {
+
+  background-color: #3483fa;
+
+  border: none;
+}
+
+.btn-primary:hover {
+
+  background-color: #2968c8;
+}
+
+
+/*RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+  .navbar form {
+
+    width: 100% !important;
+
+    margin-top: 10px;
+  }
+
+  .navbar .container {
+
+    flex-direction: column;
+  }
+}

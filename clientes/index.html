@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Transportadora GDM</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
+
+    <div class="container">
+
+      <a class="navbar-brand fw-bold"
+         href="#">
+
+        Transportadora GDM
+
+      </a>
+
+      <!-- PESQUISA -->
+      <form class="d-flex w-50">
+
+        <input
+          class="form-control"
+          type="search"
+          placeholder="Buscar produtos..."
+          id="pesquisa"
+          onkeyup="filtrarProdutos()">
+
+      </form>
+
+    </div>
+
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section class="container mt-4">
+
+    <div class="row g-4">
+
+      <!-- EM ROTA -->
+      <div class="col-md-4">
+
+        <div class="card dashboard-card text-center p-3 shadow-sm">
+
+          <h5>Entregas em rota</h5>
+
+          <h2 id="rota">0</h2>
+
+        </div>
+
+      </div>
+
+      <!-- PENDENTES -->
+      <div class="col-md-4">
+
+        <div class="card dashboard-card text-center p-3 shadow-sm">
+
+          <h5>Pendentes</h5>
+
+          <h2 id="pendente">0</h2>
+
+        </div>
+
+      </div>
+
+      <!-- ENTREGUES -->
+      <div class="col-md-4">
+
+        <div class="card dashboard-card text-center p-3 shadow-sm">
+
+          <h5>Entregues</h5>
+
+          <h2 id="entregue">0</h2>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="container mt-5">
+
+    <h3 class="mb-4">Produtos disponíveis</h3>
+
+    <div class="row g-4">
+
+      <!-- PRODUTO 1 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/rtx5090.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <span class="badge bg-success mb-2">
+              Frete grátis
+            </span>
+
+            <h5 class="card-title">
+              RTX 5090
+            </h5>
+
+            <p class="card-text">
+              R$ 3,50
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('RTX 5090')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 2 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/gtx1050ti.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <span class="badge bg-warning text-dark mb-2">
+              Mais vendido
+            </span>
+
+            <h5 class="card-title">
+              GTX 1050 Ti
+            </h5>
+
+            <p class="card-text">
+              R$ 1.049
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('GTX 1050 Ti')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 3 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/pentium.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <h5 class="card-title">
+              Intel Pentium G4560
+            </h5>
+
+            <p class="card-text">
+              R$ 700
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('Intel Pentium G4560')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 4 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/ryzen9.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <span class="badge bg-danger mb-2">
+              Promoção
+            </span>
+
+            <h5 class="card-title">
+              Ryzen 9 9950X3D
+            </h5>
+
+            <p class="card-text">
+              R$ 5.999
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('Ryzen 9 9950X3D')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 5 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/a520m.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <h5 class="card-title">
+              Gigabyte A520M-K V2
+            </h5>
+
+            <p class="card-text">
+              R$ 349
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('Gigabyte A520M-K V2')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 6 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/monitorlg.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <span class="badge bg-info mb-2">
+              Oferta
+            </span>
+
+            <h5 class="card-title">
+              Monitor LG 144Hz
+            </h5>
+
+            <p class="card-text">
+              R$ 1.200
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('Monitor LG 144Hz')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 7 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/cadeira.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <h5 class="card-title">
+              Cadeira Python Fly
+            </h5>
+
+            <p class="card-text">
+              R$ 950
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('Cadeira Python Fly')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 8 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/monster.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <span class="badge bg-success mb-2">
+              Combo
+            </span>
+
+            <h5 class="card-title">
+              Pack Monster
+            </h5>
+
+            <p class="card-text">
+              R$ 49
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('Pack Monster')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUTO 9 -->
+      <div class="col-md-4 produto">
+
+        <div class="card product-card shadow-sm">
+
+          <img src="imagens/xbox.jpg"
+               class="card-img-top">
+
+          <div class="card-body">
+
+            <span class="badge bg-primary mb-2">
+              Novo
+            </span>
+
+            <h5 class="card-title">
+              Xbox Series X
+            </h5>
+
+            <p class="card-text">
+              R$ 3.599
+            </p>
+
+            <button
+              class="btn btn-primary w-100"
+              onclick="comprar('Xbox Series X')">
+
+              Comprar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
